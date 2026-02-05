@@ -13,8 +13,8 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 15px;
+            background: #2d3748;
+            padding: 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,132 +22,147 @@
         }
         
         .container {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
+            background: #f5f1e8;
+            border-radius: 0;
+            padding: 30px;
             max-width: 450px;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 3px solid #2d3748;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 15px;
         }
         
         .header h1 {
             color: #2d3748;
-            font-size: 20px;
-            margin-bottom: 5px;
+            font-size: 22px;
+            margin-bottom: 6px;
             font-weight: 700;
+            letter-spacing: 0.5px;
         }
         
         .header p {
-            color: #718096;
+            color: #4a5568;
             font-size: 13px;
+            font-style: italic;
         }
         
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin: 20px 0;
+            gap: 15px;
+            margin: 25px 0;
         }
         
         .time-unit {
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 12px 15px;
-            border-radius: 10px;
-            min-width: 70px;
-            color: white;
+            background: #2d3748;
+            padding: 15px 18px;
+            border-radius: 4px;
+            min-width: 75px;
+            color: #f5f1e8;
+            border: 2px solid #1a202c;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .time-unit .number {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
             line-height: 1;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            font-family: Georgia, serif;
         }
         
         .time-unit .label {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            opacity: 0.9;
+            letter-spacing: 1px;
+            opacity: 0.85;
         }
         
         .progress-section {
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .progress-bar {
             width: 100%;
-            height: 8px;
-            background: #e2e8f0;
-            border-radius: 10px;
+            height: 10px;
+            background: #d4cbb8;
+            border-radius: 2px;
             overflow: hidden;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #2d3748;
         }
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
+            background: #2d3748;
+            border-radius: 0;
             transition: width 0.3s ease;
         }
         
         .progress-text {
             text-align: center;
-            color: #4a5568;
+            color: #2d3748;
             font-size: 12px;
             font-weight: 600;
+            letter-spacing: 0.5px;
         }
         
         .daily-prompt {
-            background: #f7fafc;
-            border-left: 3px solid #667eea;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0 0 0;
+            background: white;
+            border: 2px solid #2d3748;
+            padding: 18px;
+            border-radius: 0;
+            margin: 25px 0 0 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .daily-prompt h3 {
             color: #2d3748;
-            font-size: 14px;
-            margin-bottom: 8px;
+            font-size: 15px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-weight: 600;
+            gap: 8px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
         }
         
         .daily-prompt p {
             color: #4a5568;
             font-size: 13px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         
         .emoji {
-            font-size: 18px;
+            font-size: 20px;
         }
         
         .goal-achieved {
-            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
+            background: #2d3748;
+            color: #f5f1e8;
+            padding: 30px;
+            border-radius: 0;
             text-align: center;
+            border: 3px solid #1a202c;
         }
         
         .goal-achieved h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
         }
         
         .goal-achieved p {
-            font-size: 14px;
+            font-size: 15px;
             opacity: 0.95;
+            font-style: italic;
         }
     </style>
 </head>
@@ -355,7 +370,7 @@
             const progressPercent = (daysPassed / totalDays) * 100;
             
             document.getElementById('progressBar').style.width = progressPercent + '%';
-            document.getElementById('progressText').textContent = `Day ${daysPassed} of ${totalDays} in February`;
+            document.getElementById('progressText').textContent = `Day ${daysPassed} of 28 in February`;
         }
         
         function showGoalAchieved() {
